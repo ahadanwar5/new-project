@@ -1,0 +1,19 @@
+.navbar-styling{
+  background-color: rgb(255, 255, 255);
+
+}
+
+.navbar-nav-styling{
+  margin-left: 12rem;
+  margin-right: 12rem;
+
+}
+
+.nav-links-styling{
+  font-size: 1.5rem;
+  font-family: "Roboto-Regular";
+  color: rgb(8, 71, 166);
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}

@@ -183,7 +183,7 @@ const data = {
       price: "437.00",
     },
     {
-      title: "Blackmores Executive B Stress Formula",
+      title: "Blackmores Executive Formula",
       slug: "blackmores-executive-b-stress-formula",
       desc: "Blackmores Executive B Stress Formula Tablet helps treat nervous system functions. It provides sufficient energy to sustain good health and wellbeing. It contains vitamins and minerals and belongs to a class of drugs known as Multivitamins.",
       category: "Medicines",
@@ -296,7 +296,7 @@ const data = {
       price: "350.00",
     },
     {
-      title: "Always Maxi Thick Extra Long 8 Pcs",
+      title: "Always Maxi Thick Extra",
       slug: "always-maxi-thick-extra-long-8-pcs",
       desc: "Live a healthier life by breathing fresh and clean air.",
       category: "Personal Care",
@@ -542,7 +542,7 @@ const data = {
       price: "90.00",
     },
     {
-      title: "Iberogast Solution 50ml solution",
+      title: "Iberogast Solution",
       slug: "iberogast-solution-50ml-solution",
       desc: "Live a healthier life by breathing fresh and clean air.",
       category: "Organic",
@@ -612,7 +612,7 @@ const data = {
       price: "720.00",
     },
     {
-      title: "Qarshi Jam-e-Shirin 800ml Liquid",
+      title: "Qarshi Jam-e-Shirin 800ml",
       slug: "qarshi-jam-e-shirin-800ml-liquid",
       desc: "Qarshi jam-e-shirin is a refreshing and pleasant tasting syrup which is made up of natural herb extracts. It is a multipurpose syrup that can be used as a drink when mixed with water or milk or as a topping on various desserts such as ice cream and cakes. Because of its natural distillates its taste never changes and lasts long.",
       category: "Organic",
@@ -622,7 +622,7 @@ const data = {
       price: "252.00",
     },
     {
-      title: "Jawarish Amla Sada 100 Gram Powder",
+      title: "Jawarish Amla Sada 100 Gram",
       slug: "jawarish-amla-sada-100-gram-powder",
       desc: "Hamdard jawarish amla sada is a herbal medicine enriched with the goodness of vitamin C. It increases immunity and strengthens the heart and brain. It regulates functions of liver and stomach, maintains gastrointestinal health. It is proven to be effective in treating diarrhea and dysentery (diarrhea with blood), and lowers abnormal gastric and hepatic heat. Jawarish amla sada is also known to anti-tachy cardiac as it lowers fast heart beat.",
       category: "Organic",
@@ -632,7 +632,7 @@ const data = {
       price: "72.00",
     },
     {
-      title: "Hamdard Jawarish Jalinoos 100gram",
+      title: "Hamdard Jawarish Jalinoos",
       slug: "hamdard-jawarish-jalinoos-100gram",
       desc: "Hamdard jawarish jalinoos is a herbal medicine that caters to the problems of the digestive system. It is effective in improving the function of the digestive system. It relieves abdominal distension, flatulence, hyperacidity, and feeling of heaviness after meals. It improves the intestinal function and prevents constipation. Jawarish jalinoos also reduces the frequency of urination, treats piles and aids in dissolving the stones in gallbladder or kidney. Its continuous use prevents the lightning of hair colour.",
       category: "Organic",
@@ -675,7 +675,7 @@ const data = {
     //HealthCare
 
     {
-      title: "Omron-Nebulizer NE-C803-E Nebulizer",
+      title: "Omron NE-C803-E Nebulizer",
       slug: "omron-nebulizer-ne-c803-e-nebulizer",
       desc: "Omron compressor nebulizer is the best solution for those who need a basic version of it. It treats patients with lower respiratory tract infections in the most hygienic and effective way. The small and handy design makes it easy to carry and use whenever it is needed. It appropriately delivers the correct amount of drug into the respiratory tract and relieves the congestion and obstructions. Unlike most of the nebulizers, it is the quietest of all and ensures that the drug delivery is comfortable.",
       category: "Health Care",
@@ -705,7 +705,7 @@ const data = {
       price: "36.00",
     },
     {
-      title: "Accu-Chek Performa 50' Strips Glucose Monitor Strips",
+      title: "Accu-Chek Performa 50' Strips",
       slug: "accu-chek-performa-50'-strips-glucose-monitor-strips",
       desc: "-To determine blood glucose levels. Help to measure the glucose easily. Convenient and easy to use. Quick and accurate blood testing",
       category: "Health Care",
@@ -716,7 +716,7 @@ const data = {
       price: "1237.00",
     },
     {
-      title: "Smart Flamingo Abdominal Belt 2002 Small Bandage",
+      title: "Smart Flamingo Abdominal Belt",
       slug: "smart-flamingo-abdominal-belt-2002-small-bandage",
       desc: "This abdominal belt works its magic to compress and support your abdominal muscles and gives you amazing and notable results with regard to waistline reduction. The belt is also used to protect and bind surgical; incisions of the abdomen. Made from breathable and high-quality fabric, it ensures good ventilation and comfort.",
       category: "Health Care",
@@ -727,7 +727,7 @@ const data = {
       price: "2925.00",
     },
     {
-      title: "Smart-Flamingo-Rib-(Chest)-Belt-2028-Small",
+      title: "Smart-Flamingo-Rib-Belt-Small",
       slug: "Smart-Flamingo-Rib-(Chest)-Belt-2028-Small",
       desc: "This belt is used to hold the thoracic, upper abdominal region and rib cage to fix fracture or even pulled muscles. Wearing this belt facilitates you in breathing and when you do deep breathing exercise. This is an ideal product for stabilization of sternum fractures. This belt can be used for post-operative care or a rib-cage fracture. It is light-weight and thin and doesn't look odd on clothes. Moreover, the rib belt is flexible and allows comfortable breathing.",
       category: "Health Care",
@@ -737,7 +737,7 @@ const data = {
       price: "3600.00",
     },
     {
-      title: "Smart Flamingo Spoon Splint 2101 Small",
+      title: "Smart Flamingo Spoon Splint",
       slug: "smart-flamingo-spoon-splint-2101-small",
       desc: "This Smart Flamingo Spoon Splint is recommended to be used for support and protection of dislocated fractures. Its upward curve at the tip provides protection to end of the finger. Get great relief quickly by wearing this splint spoon.",
       category: "Health Care",
@@ -747,7 +747,7 @@ const data = {
       price: "945.00",
     },
     {
-      title: "Freestyle Glucometer Strips '50s' Glucose Monitor Strips",
+      title: "Freestyle Glucometer Strips",
       slug: "freestyle-glucometer-strips-'50s'-glucose-monitor-strips",
       desc: "Keeping a record with convenience and accuracy! FreeStyle Optium Glucose Test Strips are available for self-testing of blood glucose and can be used with FreeStyle Optium Neo, FreeStyle Optium, Optium Xceed, Optium and TrueSense Meters.These strips show increased accuracy with fewer errors with enhanced features of foil wrapping to enhance protection from air and moisture. Visual confirmation feature makes it easy for the customer to assure blood sample has been drawn.",
       category: "Health Care",
@@ -758,7 +758,7 @@ const data = {
       price: "1435.00",
     },
     {
-      title: "Certeza Aneroid Sphygmomanometer (Standard Size) - CR-1002",
+      title: "Certeza Aneroid CR-1002",
       slug: "certeza-aneroid-sphygmomanometer-(standard-size)-CR-1002",
       desc: "Live a healthier life by breathing fresh and clean air.",
       category: "Health Care",
@@ -769,7 +769,7 @@ const data = {
       price: "1900.00",
     },
     {
-      title: "Certeza Mercurial Free Sphygmomanometer (Desk Type) CR 2001",
+      title: "Certeza CR 2001",
       slug: "certeza-mercurial-free-sphygmomanometer-(desk-type)-cr-2001",
       desc: "The sphygmomanometer is a device used to measure blood pressure. This set combines the accurate traditional mercurial instrument with mobility, durability and added reliability. Also includes Graduated glass tube, Nylon Standard Size Cuff and Latex Bladder.",
       category: "Health Care",
@@ -780,7 +780,7 @@ const data = {
       price: "9310.00",
     },
     {
-      title: "Beurer Cuff Type Blood Pressure Monitor Bm-58",
+      title: "Beurer Blood Pressure ",
       slug: "beurer-cuff-type-blood-pressure-monitor-bm-58",
       desc: "Beurer Cuff Type Blood Pressure Monitor BM-58 is fully-automatic and takes blood pressure measurement on the upper arm. The display is perfect to read with white illuminated XL display (70 x 82 mm). Start/stop button is illuminated with sensor-touch buttons. Average of all saved measured values and morning and evening blood pressure for the last 7 days is displayed with 2 x 60 memory spaces. There is optimal control of the upper arm with circumferences 22 - 36 cm. The automatic switch-off function is provided with automatic pressure pre-selection and deflation. Storage pouch included. This easy-to-use has Bluetooth 4.0 wireless technology for transmission of the measured values to your Smartphone.",
       category: "Health Care",
@@ -792,7 +792,7 @@ const data = {
     },
     {
       title:
-        "SHARP Air Purifier With PlasmaCluster and HEPA Filter (FU-J30SA-B)",
+        "SHARP Air Purifier",
       slug: "sharp-air-purifier-with-plasmaCluster-and-hepa-filter-(fu-j30sa-b)",
       desc: "Live a healthier life by breathing fresh and clean air. Sharp plasmacluster air purifier makes the environment of your home, office or any other setting fresher, healthier and cleaner. This air purifier by Sharp combines patented Plasmacluster ion technology with True HEPA filtration to clean the environment in which you breathe. Patented plasmacluster ion releasing from this air purifier reduces bacteria viruses, mold and fungus. The air purifiers by Sharp are tested by independent laboratories to verify the air-cleaning capability of the filtration system.",
       category: "Health Care",
@@ -803,7 +803,7 @@ const data = {
       price: "47700.00",
     },
     {
-      title: "Dignity Sheet (Under Pad) X-Large Sheets",
+      title: "Dignity Sheets",
       slug: "dignity-sheet-(under-pad)-x-large-sheets",
       desc: "Dignity Sheets are disposable and water resistant sheets that are perfect for everyday usage and will keep your patient safe in any situation. The disposable dignity sheet is single-use and patient-specific, soaking up any water and leaving your patient feeling comfortable and dry. It is highly recommended and necessary for daily use in high-intensity workload regions where patient behavior is unpredictable since it protects the patient and provides immediate relief. The virgin fluff pulp, high-tech SAP, and absorbent tissue make up the bottom PE cast film, hot rolled non-woven fabric, and middle absorbent layer of the sheet. The large sheet comes in width of 600 mm, and the length of 900 mm. It is intended for cases like gynecological examination, hospital departments, bed ridden & elderly patients, menstrual periods, postpartum (after pregnancy), beauty care, baby bed sheet and hotels etc",
       category: "Health Care",
@@ -813,7 +813,7 @@ const data = {
       price: "670.00",
     },
     {
-      title: "Accu-Check-Active-Strips-25s-Strip",
+      title: "Accu-Check-Active-Strips-25s",
       slug: "accu-check-active-strips-25s-strip",
       desc: "Use these high-quality blood strips to measure your glucose. The Accu Check Blood Strips are designed to easily check the glucose, a type of sugar, in your blood. These strips are easy to handle and measure the amount of glucose. Also, the strips are compatible with the blood glucose meter.",
       category: "Health Care",
@@ -836,7 +836,7 @@ const data = {
     //Carebaby
 
     {
-      title: "Enfamil A.R Powder 400g Powder",
+      title: "Enfamil A.R Powder",
       slug: "enfamil-a.r-powder-400g-powder",
       desc: "Enfamil A.R.  is suitable for infants from birth on when not breastfed. Enfamil A.R. is for the dietary management of regurgitation or spitting up and can be used as a sole source of nourishment up to 6 months of age and as the basis of diversified diet for older infants. Enfamil A.R.  is a nutritionally complete, pre-thickened formula containing a unique rice starch thickener that is thin in the bottle and thickens in the stomach",
       category: "Carebaby",
@@ -906,7 +906,7 @@ const data = {
       price: "3705.00",
     },
     {
-      title: "Beurer Digital Baby Food Warmer - BY 52",
+      title: "Beurer Food Warmer - BY 52",
       slug: "beurer-digital-baby-food-warmer-by-52",
       desc: "This device keeps the food of your baby warm. It features a LED display that clearly displays the temperature at which the food is being warmed. As it is specifically designed for babies, the device ensures that the baby food is heated gently and evenly. Also, it is designed in such a way that it can conveniently hold all sorts of jars and bottles carrying baby food items. A lifter also comes with it so that you can remove the jars or bottles easily. This is surely a convenient way to give your baby warm and fresh food every time.",
       category: "Carebaby",
@@ -926,7 +926,7 @@ const data = {
       price: "1392.00",
     },
     {
-      title: "Nestle' LACTOGEN 1 400g Milk Powder",
+      title: "Nestle' LACTOGEN 600g",
       slug: "nestle'-lactogen-1-400g-milk-powder",
       desc: "Nestle Lactogen 1 is an infant formula to provide nutritional value when they cannot be breastfed due to medical or other reasons. It is a source of essential vitamins, minerals, and other nutrients that are important for the healthy growth of the baby. It supports the digestive system and decreases stomach discomfort. Fortified with DHA and ARA, it plays an essential role in the brain and visual development of the baby.",
       category: "Carebaby",
@@ -936,7 +936,7 @@ const data = {
       price: "910.00",
     },
     {
-      title: "Nestle' LACTOGEN 2 400g Milk Powder",
+      title: "Nestle' LACTOGEN 400g",
       slug: "nestle'-lactogen-2-400g-milk-powder",
       desc: "Nestle Lactogen 2 is a follow-up formula for infants older than 6 months that fulfils their nutritional requirements and complements the weaning diet. It is a source of essential vitamins, minerals, and other nutrients that are important for healthy growth of an infant. It supports the digestive system and decreases stomach discomfort. Fortified with DHA and ARA, it plays an essential role in the brain and visual development of an infant. ",
       category: "Carebaby",
@@ -946,7 +946,7 @@ const data = {
       price: "910.00",
     },
     {
-      title: "Nestle' LACTOGROW 3 200g Milk Powder",
+      title: "Nestle' LACTOGROW 200g",
       slug: "Nestle'-lactogrow-3-200g-milk-powder",
       desc: "Nestle Lactogrow 3 is a growing-up formula for children older than 1 year of age. It is uniquely formulated to meet the daily nutritional requirements of the children. It contains a well-balanced amount of vitamins and minerals that prevent the nutritional and developmental issues faced by children. It supports the rapid growth stage and aids in the overall progress from infancy to childhood. Fortified with DHA and ARA, it plays an essential role in the brain and visual development of the child.",
       category: "Carebaby",
@@ -956,7 +956,7 @@ const data = {
       price: "475.00",
     },
     {
-      title: "Morinaga-BF-Mama-Nut-Sup-Vanilla-Milk-Powder",
+      title: "Morinaga-BF-Mama",
       slug: "morinaga-bf-mama-nut-sup-vanilla-milk-powder",
       desc: "Morinaga BF-Mama is used for proper and sufficient nutritional support during pregnancy and lactation for the mother's own health and proper growth of the pre-born and suckling child.",
       category: "Carebaby",
@@ -967,7 +967,7 @@ const data = {
       price: "724.00",
     },
     {
-      title: "Nestle Cerelac Wheat 350gm Milk Powder",
+      title: "Nestle Cerelac Wheat 350gm",
       slug: "nestle-cerelac-wheat-350gm-milk-powder",
       desc: "Nestle cerelac wheat is fortified with probiotics, vitamins, and minerals which support a baby’s growth and development. Nestle cerelac is carefully formulated to fulfil the needs of a growing baby. Nestle cerelac ensures easy digestibility and has naturally active probiotics that strengthen a baby’s natural defenses. Nestle cerelac wheat has a gentle taste and texture. Nestle cerelac wheat protects babies from developing nutritional deficiencies during their growing age.",
       category: "Carebaby",
@@ -977,7 +977,7 @@ const data = {
       price: "560.00",
     },
     {
-      title: "Nestle Cerelac 3 Fruits 350gm Milk Powder",
+      title: "Nestle Cerelac Fruits 350gm",
       slug: "nestle-cerelac-3-fruits-350gm-milk-powder",
       desc: "Nestle cerelac 3 fruits is specially designed to fulfil the nutritional needs of a growing baby. This cerelac supports the physical and cognitive development of a baby, boosts immunity, fulfils a baby’s daily need of iron, and makes the transition to solid food easier. Nestle cerelac 3 fruits assists in developing a strong and sturdy physique and keeps a baby’s tummy full for a longer time period.",
       category: "Carebaby",

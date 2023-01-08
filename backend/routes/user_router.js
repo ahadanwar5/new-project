@@ -9,7 +9,8 @@ const userRouter = express.Router();
 userRouter.post("/login", async (req, res) => {
   console.log("Login call was made");
   console.log(req.body);
-  const user = await User.findOne({ email: req.body.loginmail });
+  const user = await User.findOne({ email: req.body.email });
+
   if (user) {
     if (bcrypt.compareSync(req.body.password, user.password)) {
       res.send({
@@ -21,8 +22,9 @@ userRouter.post("/login", async (req, res) => {
       });
       return;
     }
+  } else {
+    res.status(401).send({ message: "Invalid Email or Password" });
   }
-  res.status(401).send({ message: "Invalid Email or Password" });
 });
 
 userRouter.post(

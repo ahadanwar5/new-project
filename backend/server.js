@@ -6,16 +6,15 @@ import seedRouter from "./routes/seed_router.js";
 import productRouter from "./routes/product_router.js";
 import categoryRouter from "./routes/category_router.js";
 import userRouter from "./routes/user_router.js";
+import orderRouter from "./routes/order_router.js"
 const website_express = express();
 
 website_express.use(express.json());
 website_express.use(express.urlencoded({ extended: true }));
 dotenv.config();
 
-
-
 mongoose
-  .connect(process.env.MongoDB_Connection_URL,{ useNewUrlParser: true })
+  .connect(process.env.MongoDB_Connection_URL)
   .then(() => {
     console.log("Connected to DB");
   })
@@ -45,3 +44,4 @@ website_express.use("/api/seed/", seedRouter);
 website_express.use("/api/products/", productRouter);
 website_express.use("/api/category/", categoryRouter);
 website_express.use("/api/users/", userRouter);
+website_express.use("/api/orders/",orderRouter);

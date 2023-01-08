@@ -1,0 +1,135 @@
+.link-category-display{
+    text-decoration: none;
+}
+
+
+
+
+.category-styling {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Roboto-Light";
+    font-weight:600;
+    padding: 5px 0;
+    font-size: 115%;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .category-styling:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .category-styling:hover {
+   background-position: 0;
+  }
+  
+  .category-styling:hover::before {
+    width:100%;
+  }
+
+
+
+
+.cart-heading-title{
+    height: 220px;
+    background-image: url('/public/images/pages/cart.jpg'); 
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;   
+  }
+  
+  .cart-heading{
+    font-size: 3.5rem;
+    
+    font-family: "Roboto-Regular";
+    font-weight:600;
+    letter-spacing: 0.05em;
+  }
+
+
+ .badge-styling{
+  height: 15%;
+  width: 20%;
+
+ }
+
+ .product-list-icon-styling{
+  width: 1.9rem;
+  height: 2rem;
+  color: black;
+ }
+
+ .product-list-icon-styling:hover{
+  color:rgb(250,52,52);
+ }
+
+ @media (max-width:776px) {
+  .product-list-icon-styling{
+    display:none
+  }
+  .badge-styling{
+    display: none;
+  }
+ }
+
+.pagination-styling{
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+}
+ 
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+ 
+}
+
+.paginationBttns a {
+  padding: 5px 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  color: #000000;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: #ffffff;
+  background-color: #ff0000;
+}
+
+.paginationActive a {
+  color: #ffffff;
+  background-color: #ff0000;
+}
+
+.paginationDisabled a {
+  color: rgba(128, 128, 128, 0.11);
+  background-color: rgba(128, 128, 128, 0.11);;
+}
+
+.paginationDisabled:hover a {
+  background-color: rgba(128, 128, 128, 0.11);
+  color: rgba(128, 128, 128, 0.11);
+}

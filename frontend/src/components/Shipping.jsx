@@ -52,7 +52,7 @@ const Shipping = () => {
         country,
       })
     );
-    navigate("/payment");
+    navigate("/placeorder");
   };
 
   return (

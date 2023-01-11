@@ -3,11 +3,7 @@ import axios from "axios";
 import React, { useContext } from "react";
 
 import { Store } from "../Store";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Box } from "@mui/material";
+import { Link } from 'react-router-dom'
 import "../styles/ProductShop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -53,8 +49,9 @@ const ProductShop = ({ item }) => {
 
     <div class="col hp">
       <div class="card h-90 shadow-sm card-styling-boundary">
+        <Link  to={`/product/${item.slug}`}>
         <img src={item.image} class="card-img-top" alt="product.title" />
-
+        </Link>
         <div class="label-top shadow-sm">
           <a class="text-white" href="#">
             {item.brand}

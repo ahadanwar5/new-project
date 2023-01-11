@@ -1,0 +1,33 @@
+.xfeatured-brands {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .xlogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .xlogo {
+    width: '100%'; /* adjust as needed */
+    height: '100%'; /* adjust as needed */
+
+    max-width:175px;
+    max-height:175px;
+
+    margin: 20px;
+}
+
+  .xlogosContainer {
+    max-width:100%;
+    max-height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.xlogo:hover {
+    transform: scale(1.1);
+  }
+
+  

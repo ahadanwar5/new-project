@@ -1,0 +1,33 @@
+.featured-brands {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: '100%'; /* adjust as needed */
+    height: '100%'; /* adjust as needed */
+
+    max-width:175px;
+    max-height:175px;
+
+    margin: 20px;
+}
+
+  .logosContainer {
+    max-width:100%;
+    max-height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+  }
+
+  

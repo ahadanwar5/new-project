@@ -1,4 +1,3 @@
-
 import React, { useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,7 +5,7 @@ import "../styles/cart.css";
 import { Store } from "../Store";
 import { Scrollbars } from "react-custom-scrollbars-2";
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 export default function Cart() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -135,6 +134,7 @@ export default function Cart() {
       </header>
 
       {cartView}
+      {/* <Footer /> */}
     </>
   );
 }

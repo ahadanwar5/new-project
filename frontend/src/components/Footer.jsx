@@ -1,144 +1,137 @@
-import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faFacebook,
-//   faTwitter,
-//   faInstagram,
-// } from "@fortawesome/free-brands-svg-icons";
-// import { Link } from "react-router-dom";
-// import "../styles/Footer.css";
-function Footer() {
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import Divider from '@material-ui/core/Divider';
+import PaymentIcon from '@material-ui/icons/Payment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons';
+import Box from '@material-ui/core/Box';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { grey } from '@material-ui/core/colors';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: grey[200],
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    position: 'relative',
+    bottom: 0,
+    width: '100%',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
+  },
+  linksContainer: {
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+  },
+  link: {
+    color: theme.palette.text.secondary,
+    textDecoration: 'none',
+    marginBottom: theme.spacing(0.5),
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+  email: {
+    marginTop: theme.spacing(3),
+    color: theme.palette.text.secondary,
+  },
+  paymentContainer: {
+    marginTop: theme.spacing(3),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  },
+  paymentIcon: {
+    marginRight: theme.spacing(1),
+    fontSize: '2rem',
+    color: theme.palette.text.secondary,
+  },
+  divider: {
+    width: '100%',
+    margin: theme.spacing(5, 0),
+    backgroundColor: theme.palette.divider,
+  },
+  footerColumn: {
+    textAlign: 'center',
+    padding: theme.spacing(1),
+  },
+  footerRow: {
+    margin: theme.spacing(1),
+  },
+  footerLink: {
+    color: theme.palette.text.secondary,
+    textDecoration: 'none',
+    margin: theme.spacing(1)
+  },
+  copyright: {
+    position: 'absolute',
+    bottom: theme.spacing(1),
+    right: theme.spacing(2),
+  },
+  footerColumnTitle: {
+    margin: `${theme.spacing(4)}px 0 ${theme.spacing(2)}px`
+  },
+  
+}));
+
+export default function Footer() {
+  const classes = useStyles();
+
   return (
-    // <div class="container my-5">
-    //   <footer
-    //     class="text-center text-lg-start text-white"
-    //     style={{ backgroundColor: "#929fba" }}
-    //   >
-    //     <div class="container p-4 pb-0">
-    //       <section class="">
-    //         <div class="row">
-    //           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-    //             <h6 class="text-uppercase mb-4 font-weight-bold">
-    //               Company name
-    //             </h6>
-    //             <p>
-    //               Here you can use rows and columns to organize your footer
-    //               content. Lorem ipsum dolor sit amet, consectetur adipisicing
-    //               elit.
-    //             </p>
-    //           </div>
-
-    //           <hr class="w-100 clearfix d-md-none" />
-
-    //           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-    //             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-    //             <p>
-    //               <a class="text-white">MDBootstrap</a>
-    //             </p>
-    //             <p>
-    //               <a class="text-white">MDWordPress</a>
-    //             </p>
-    //             <p>
-    //               <a class="text-white">BrandFlow</a>
-    //             </p>
-    //             <p>
-    //               <a class="text-white">Bootstrap Angular</a>
-    //             </p>
-    //           </div>
-
-    //           <hr class="w-100 clearfix d-md-none" />
-
-    //           <hr class="w-100 clearfix d-md-none" />
-
-    //           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-    //             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-    //             <p>
-    //               <i class="fas fa-home mr-3"></i> New York, NY 10012, US
-    //             </p>
-    //             <p>
-    //               <i class="fas fa-envelope mr-3"></i> info@gmail.com
-    //             </p>
-    //             <p>
-    //               <i class="fas fa-phone mr-3"></i> + 01 234 567 88
-    //             </p>
-    //             <p>
-    //               <i class="fas fa-print mr-3"></i> + 01 234 567 89
-    //             </p>
-    //           </div>
-
-    //           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-    //             <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#3b5998" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-facebook-f"></i>
-    //             </a>
-
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#55acee" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-twitter"></i>
-    //             </a>
-
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#dd4b39" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-google"></i>
-    //             </a>
-
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#ac2bac" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-instagram"></i>
-    //             </a>
-
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#0082ca" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-linkedin-in"></i>
-    //             </a>
-    //             <a
-    //               class="btn btn-primary btn-floating m-1"
-    //               style={{ backgroundColor: "#333333" }}
-    //               href="#!"
-    //               role="button"
-    //             >
-    //               <i class="fab fa-github"></i>
-    //             </a>
-    //           </div>
-    //         </div>
-    //       </section>
-    //     </div>
-
-    //     <div
-    //       class="text-center p-3"
-    //       style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-    //     >
-    //       © 2020 Copyright:
-    //       <a class="text-white" href="https://mdbootstrap.com/">
-    //         MDBootstrap.com
-    //       </a>
-    //     </div>
-    //   </footer>
-    // </div>
-    <div>Footer</div>
+    <footer className={classes.root}>
+      <Container maxWidth="md" className={classes.container}>
+        <Grid container className={classes.footerRow}>
+          <Grid item xs={12} sm={4} className={classes.footerColumn}>
+            <List component="nav" className={classes.linksContainer}>
+              <ListItem component="a" href="#" className={classes.link}>
+                <ListItemText primary="Home" />
+              </ListItem>
+              <ListItem component="a" href="#" className={classes.link}>
+                <ListItemText primary="About Us" />
+              </ListItem>
+              <ListItem component="a" href="#" className={classes.link}>
+                <ListItemText primary="Delivery" />
+              </ListItem>
+              <ListItem component="a" href="#" className={classes.link}>
+                <ListItemText primary="Contact Us" />
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid item xs={12} sm={4} className={classes.footerColumn}>
+            <Typography variant="subtitle1" className={classes.email}>
+              support@paradocs.com
+            </Typography>
+            <Link href="#" className={classes.footerLink}>Contact Us</Link>
+            <Link href="#" className={classes.footerLink}>FAQ</Link>
+          </Grid>
+          <Grid item xs={12} sm={4} className={classes.footerColumn}>
+            <Box className={classes.paymentContainer}>
+              <PaymentIcon className={classes.paymentIcon} />
+              <FontAwesomeIcon icon={faCcVisa} className={classes.paymentIcon} />
+              <FontAwesomeIcon
+                icon={faCcMastercard}
+                className={classes.paymentIcon}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+        <Typography variant="caption" className={classes.copyright}>
+          Copyright © Paradocs {new Date().getFullYear()}
+        </Typography>
+      </Container>
+    </footer>
   );
 }
-
-export default Footer;

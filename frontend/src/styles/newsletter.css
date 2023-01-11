@@ -1,0 +1,70 @@
+.xnew-container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff0a;
+}
+
+.xnew-row {
+
+}
+
+.xnew-title {
+    font-size: 70px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.xnew-desc {
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.xinput-container {
+    display: flex;
+    justify-content: center;
+}
+
+.xinput-container input {
+    width: 300px;
+    height: 40px;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    letter-spacing: 1.2px;
+}
+
+.xinput-container button {
+    padding: 5px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.5s;
+}
+
+.xinput-container button:hover {
+    background-color: #ff0000;
+}
+
+@media screen and (max-width: 481px) {
+    .input-container input {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .xnew-title {
+        font-size: 30px;
+    }
+    
+    .xnew-desc {
+        font-size: 12px;
+    }
+}

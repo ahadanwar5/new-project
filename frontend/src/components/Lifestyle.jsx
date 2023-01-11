@@ -1,7 +1,7 @@
 import {
     faChevronRight,
     faCartShopping,
-    faHeart,
+    faHeart,faChevronLeft
   } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import axios from "axios";
@@ -14,6 +14,8 @@ import {
   import { Store } from "../Store";
   import "../styles/ProductsShop.css";
   import Navbar from "./Navbar"
+  import "../styles/pagination.css";
+  import Footer from "./Footer";
   const Lifestyle = () => {
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { cart, wish, userInfo } = state; //Comes from the initial state
@@ -28,7 +30,7 @@ import {
     //for paginate
     const [pageNumber, setPageNumber] = useState(0);
   
-    const productPerPage = 90;
+    const productPerPage = 12;
   
     const pagesVisited = pageNumber * productPerPage;
   
@@ -143,36 +145,7 @@ import {
                   </div>
                 </header>
   
-                {/* 
-                <nav class="mt-4" aria-label="Page navigation sample">
-                  <ul class="pagination">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#">
-                        Previous
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a class="page-link" href="#">
-                        1
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        2
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        3
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">
-                        Next
-                      </a>
-                    </li>
-                  </ul>
-                </nav> */}
+               
               </main>
             </div>
           </div>
@@ -183,7 +156,40 @@ import {
               {displayProducts}
             </div>
           </div>
+          <div class="container-fluid pagination-grid">
+          <div></div>
+          <div>
+            <ReactPaginate
+              activeClassName={"pagination-item paginate-active "}
+              breakClassName={"pagination-item"}
+              breakLabel={"..."}
+              containerClassName={"pagination-styling"}
+              disabledClassName={"disabled-paginate-page"}
+              marginPagesDisplayed={2}
+              nextClassName={"pagination-item2 pagination-next "}
+              nextLabel={
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  style={{ fontSize: 18, width: 150 }}
+                />
+              }
+              onPageChange={changePage}
+              pageCount={pageCount}
+              pageClassName={"pagination-item pagination-page "}
+              pageRangeDisplayed={2}
+              previousClassName={"pagination-item2 pagination-previous"}
+              previousLabel={
+                <FontAwesomeIcon
+                  icon={faChevronLeft}
+                  style={{ fontSize: 18, width: 150 }}
+                />
+              }
+            />
+          </div>
+          <div></div>
         </div>
+        </div>
+        <Footer/>
       </>
     );
   };

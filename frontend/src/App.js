@@ -15,6 +15,9 @@ import Organic from "./components/Organic";
 import HealthCare from "./components/HealthCare";
 import Carebaby from "./components/Carebaby";
 import PersonalCare from "./components/PersonalCare";
+import ProductScreen from "./components/ProductScreen";
+import Shipping from "./components/Shipping";
+import Delivery from "./pages/Delivery";
 
 function App() {
   return (
@@ -30,10 +33,13 @@ function App() {
           <Route path="/shop/HealthCare" element={<HealthCare />} />
           <Route path="/shop/Carebaby" element={<Carebaby />} />
           <Route path="/shop/PersonalCare" element={<PersonalCare />} />
+          <Route path="/product/:slug" element={<ProductScreen />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/delivery" element={<Delivery />} />
         </Routes>
       </div>
     </Router>

@@ -1,6 +1,12 @@
 import bcrypt from "bcryptjs";
 
 const data = {
+  brandList: [
+    {
+      name: 'Sample',
+      image: "/images/slider/1.jpg"
+    }
+  ],
   users: [
     {
       name: "Moeiz",

@@ -52,7 +52,14 @@ function Register() {
           <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
             <div class="card-img-left d-none d-md-flex"></div>
             <div class="card-body p-4 p-sm-5">
-              <h5 class="card-title text-center mb-5 fw-light fs-5">
+              <h5
+                class="card-title text-center mb-3 fw-light"
+                style={{
+                  fontSize: 30,
+                  color: "rgb(12,43,20)",
+                  fontFamily: "Inter-Medium",
+                }}
+              >
                 Register
               </h5>
               <form>

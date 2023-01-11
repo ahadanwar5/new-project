@@ -1,6 +1,15 @@
 import axios from 'axios'
+import {
+    faCartShopping,
+    faHeart,
+    faShoppingCart,
+  } from "@fortawesome/free-solid-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useState } from 'react'
+import { Link, NavLink } from "react-router-dom";
+
 import { Store } from '../Store';
+import '../styles/quick.css'
 
 const Quick = ({item}) => {
   //for change image
@@ -16,75 +25,87 @@ const Quick = ({item}) => {
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {cart, wish} = state;
-    const addToCartHandler = async () => {
-        const existItem = cart.cartItems.find((x) => x._id === item._id);
-        const quantity = existItem ? existItem.quantity + 1 : 1; //if existItem than quantity + 1 in cart if not than 1
-        
-        //this you can put but you don’t have to
-        const { data } = await axios.get(`/api/products/slug/${item.slug}`);
-        if (data.countInStock < quantity) {
-            window.alert('Sorry. Product is out of stock');
-            return;
-        }
 
-        ctxDispatch({
-        type: 'CART_ADD_ITEM',
-        payload: { ...item, quantity },
-        });
-    };
+  const addToCartHandler = async () => {
+    const existItem = cart.cartItems.find((x) => x._id === item._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1; //if existItem than quantity + 1 in cart if not than 1
+
+    const { data } = await axios.get(`/api/products/${item.slug}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock.");
+      return;
+    }
+
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...item, quantity },
+    });
+  };
+
+
 
     const addToWishHandler = () => {
-
         const existItem = wish.wishItems.find((x) => x._id === item._id);
         const quantity = existItem ? existItem.quantity : 1;
-        
-        //const { data } = await axios.get(`/api/products/slug/${product.slug}`);
+    
         if (existItem) {
-            window.alert('Sorry. You have already added the product to your wish list.');
-            return;
+          window.alert(
+            "Sorry. You have already added the product to your wish list."
+          );
+          return;
         }
-        
+    
         ctxDispatch({
-          type: 'WISH_ADD_ITEM',
+          type: "WISH_ADD_ITEM",
           payload: { ...item, quantity },
-          });
-    }
+        });
+      };
+    
+
 
     return (
     <div className={style}>
-        <div className="card-quick" key={item._id}>
-            <div className="card-row">
+    <div className="card-quick" key={item._id}>
                 <div className="card-images">
                     <div className="card-top">
                         <img src={selectedImage || item.image} alt={item.title} />
                     </div>
-                    
                 </div>
-            </div>
-            <div className="card-row">
-                <div className="first-div div">
-                    <h2 className='title'>{item.title}</h2>
-                    <p className='category'>{item.category}</p>
-                </div>
-                <div className="second-div div">
-                    <span className="price">Price: ${item.price}</span>
-                    <div className="quantity">Quantity: 1</div>
-                </div>
-                <div className="third-div div">
-                    <p className="desc">{item.desc}</p>
-                </div>
-                <div className="fourth-div div">
-                    {item.countInStock === 0 ? (
-                        <button className='cart cart-out' disabled >Out of stock</button>
-                        ) : (
-                        <button className='cart' onClick={addToCartHandler}>Add to Cart</button>)
-                    }
-                    <button className='wish' onClick={addToWishHandler}>Add to Wish</button>
-                </div>
-            </div>
+        <div class="card-body">
+          <div class="clearfix mb-2">
+            <span class="float-start product-list-title-styling">
+              {item.title}
+            </span>
+          </div>
+        <span class=" d-block float-start product-list-price-styling">
+            Rs {item.price}
+        </span>
+          
+        <div className='justify-content-evenly'>  
+        <h5 class="float-start ">{item.desc}</h5> 
+        </div>
+        
+        
+        <div class="btn-group">
+            <span class="float-end">
+              <FontAwesomeIcon
+                onClick={addToWishHandler}
+                icon={faHeart}
+                class="wishlist-icon-styling mr-1"
+              />
+            </span>
+            <span class="float-end">
+              <FontAwesomeIcon
+                onClick={addToCartHandler}
+                icon={faCartShopping}
+                class="wishlist-icon-styling mr-1"
+              />
+            </span>
+        </div>
+        </div>
         </div>
         <button className='back'  onClick={changeStyle}>Close</button>
-    </div>
+    </div> 
     )
 }
 

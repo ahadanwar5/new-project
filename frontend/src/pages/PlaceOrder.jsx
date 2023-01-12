@@ -4,6 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useEffect, useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Table,
+  Button,
+  Spinner
+} from "reactstrap";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { toast } from "react-toastify";
@@ -75,25 +83,76 @@ const PlaceOrder = () => {
   return (
     <>
       <Navbar />
-      <p>
-        {cart.shippingAddress.fullName}, {cart.shippingAddress.address},{" "}
-        {cart.shippingAddress.postalCode}, {cart.shippingAddress.city},{" "}
-        {cart.shippingAddress.country}{" "}
-      </p>
-      
-      {cart.cartItems.map((item) => (
-        <div>{item.title}</div>
-      ))}
+      <Card>
+        <CardHeader>Shipping Address</CardHeader>
+        <CardBody>
+          <h6>
+          {cart.shippingAddress.fullName}{" "}
+          </h6>
+          <p>  
+            {cart.shippingAddress.address}, 
+            {cart.shippingAddress.postalCode}, {cart.shippingAddress.city},{" "}
+            {cart.shippingAddress.country}{" "}
+          </p>
+        </CardBody>
+      </Card>
+      <Card>
+        <CardHeader>Order Summary</CardHeader>
+        <CardBody>
+          <Table responsive>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+            {cart.cartItems.map((item) => (
+                <tr>
+                  <td><img src={item.image} alt={item.title} width={100} height={150} /></td>
+                  <td> {item.title} </td>
+                  <td>{item.quantity}</td>
+                  <td>${item.price.toFixed(2)}</td>
+                </tr>
+              ))}
 
-      <span>${cart.itemsPrice.toFixed(2)}</span>
-      <span>${cart.shippingPrice.toFixed(2)}</span>
-      <span>${cart.taxPrice.toFixed(2)}</span>
-      <span>${cart.totalPrice.toFixed(2)}</span>
-
-      <button onClick={placeOrderHandler}>Place Order</button>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Items Total:</td>
+                <td>${cart.itemsPrice.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Shipping:</td>
+                <td>${cart.shippingPrice.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td>${cart.taxPrice.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Total:</td>
+                <td>${cart.totalPrice.toFixed(2)}</td>
+              </tr>
+            </tfoot>
+          </Table>
+          {loading ? (
+            <Spinner color="primary" />
+          ) : (
+            <Button color="primary" onClick={placeOrderHandler}>
+              Confirm Order
+            </Button>
+          )}
+        </CardBody>
+      </Card>
       <Footer />
     </>
   );
 };
 
 export default PlaceOrder;
+
+
+ 

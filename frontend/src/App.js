@@ -18,6 +18,8 @@ import PersonalCare from "./components/PersonalCare";
 import ProductScreen from "./components/ProductScreen";
 import Shipping from "./components/Shipping";
 import Delivery from "./pages/Delivery";
+import PlaceOrder from "./pages/PlaceOrder";
+import Wish from "./pages/Wish";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/delivery" element={<Delivery />} />
+          <Route path="/placeorder" element={<PlaceOrder/>}/>
+          <Route path="/wish" element={<Wish/>} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,24 @@
+.product-display {
+    margin: 0 auto;
+    padding: 1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.product-display:hover {
+    cursor: default;
+    box-shadow: none;
+  }
+  
+
+.order-details-box{
+    padding: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.cart-button{
+    align-items: right;
+}
+
+  

@@ -5,6 +5,13 @@ import React, { useContext, useEffect, useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import {
+  faChevronRight,
+  faCartShopping,
+  faHeart,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
+
+import {
   Card,
   CardBody,
   CardHeader,
@@ -17,6 +24,8 @@ import Navbar from "../components/Navbar";
 import { toast } from "react-toastify";
 import { getError } from "../utils";
 import { Store } from "../Store";
+
+import '../styles/placeorder.css'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -83,22 +92,31 @@ const PlaceOrder = () => {
   return (
     <>
       <Navbar />
-      <Card>
-        <CardHeader>Shipping Address</CardHeader>
-        <CardBody>
-          <h6>
-          {cart.shippingAddress.fullName}{" "}
-          </h6>
-          <p>  
-            {cart.shippingAddress.address}, 
-            {cart.shippingAddress.postalCode}, {cart.shippingAddress.city},{" "}
-            {cart.shippingAddress.country}{" "}
-          </p>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardHeader>Order Summary</CardHeader>
-        <CardBody>
+
+      <header>
+        <div class="bg-image d-flex justify-content-center align-items-center cart-heading-title">
+          <h1 class="text-white cart-heading">Order Summary</h1>
+        </div>
+       </header>  
+
+      <Card className="product-display">
+        <CardBody >
+          <div className="cart-button">
+          <div class="btn-group">
+            <Link to="/cart">
+              <button class="btn" data-toggle="tooltip">
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  class="product-list-icon-styling"
+                />
+              </button>
+            </Link>
+            <span class="badge badge-danger badge-styling">
+              {cart.cartItems.length}
+            </span>
+          </div>
+          </div>
+
           <Table responsive>
             <thead>
               <tr>
@@ -114,39 +132,69 @@ const PlaceOrder = () => {
                   <td><img src={item.image} alt={item.title} width={100} height={150} /></td>
                   <td> {item.title} </td>
                   <td>{item.quantity}</td>
-                  <td>${item.price.toFixed(2)}</td>
+                  <td>Rs.{item.price.toFixed(2)}</td>
                 </tr>
               ))}
 
             </tbody>
-            <tfoot>
-              <tr>
-                <td>Items Total:</td>
-                <td>${cart.itemsPrice.toFixed(2)}</td>
-              </tr>
-              <tr>
-                <td>Shipping:</td>
-                <td>${cart.shippingPrice.toFixed(2)}</td>
-              </tr>
-              <tr>
-                <td>Tax:</td>
-                <td>${cart.taxPrice.toFixed(2)}</td>
-              </tr>
-              <tr>
-                <td>Total:</td>
-                <td>${cart.totalPrice.toFixed(2)}</td>
-              </tr>
-            </tfoot>
           </Table>
-          {loading ? (
-            <Spinner color="primary" />
-          ) : (
-            <Button color="primary" onClick={placeOrderHandler}>
-              Confirm Order
-            </Button>
-          )}
         </CardBody>
       </Card>
+
+      <div style={{display: 'flex', flexDirection: 'row', margin:'3rem', justifyContent:'space-evenly'}}>
+        <Card className="order-details-box">
+          <CardBody style={{textAlign: "left"}}>
+            <h6>
+              Shipping Information
+            </h6>
+            <h6>
+            {cart.shippingAddress.fullName}{" "}
+            </h6>
+            <p>  
+              {cart.shippingAddress.address}, <br />
+              {cart.shippingAddress.city},{" "}
+              {cart.shippingAddress.country}{". "} {cart.shippingAddress.postalCode}
+            </p>
+          </CardBody>
+        </Card>
+
+        <Card className="order-details-box" style={{textAlign: "left"}}>
+          <Table responsive>
+          <h6>
+              Order Details
+          </h6>
+            <tbody>
+                  <tr>
+                    <td>Items Total:</td>
+                    <td>Rs.{cart.itemsPrice.toFixed(2)}</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping:</td>
+                    <td>Rs.{cart.shippingPrice.toFixed(2)}</td>
+                  </tr>
+                  <tr>
+                    <td>Tax:</td>
+                    <td>Rs.{cart.taxPrice.toFixed(2)}</td>
+                  </tr>
+                  <tr>
+                    <td>Total:</td>
+                    <td>Rs.{cart.totalPrice.toFixed(2)}</td>
+                  </tr>
+            </tbody>
+
+            {loading ? (
+              <Spinner color="primary" />
+            ) : (
+              <Button style={{marginTop:'20px'}} color="primary" onClick={placeOrderHandler}>
+                Confirm Order
+              </Button>
+            )}
+
+          </Table>
+        </Card>
+
+      </div>
+      
       <Footer />
     </>
   );

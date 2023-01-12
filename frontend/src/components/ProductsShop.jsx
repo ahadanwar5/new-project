@@ -16,6 +16,7 @@ import ProductShop from "./ProductShop";
 import { Store } from "../Store";
 import "../styles/ProductsShop.css";
 import "../styles/pagination.css";
+import ScrollToTop from "./ScrollToTop";
 
 const ProductsShop = () => {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -155,6 +156,7 @@ const ProductsShop = () => {
         </div>
         <div class="container-fluid pagination-grid">
           <div></div>
+          
           <div>
             <ReactPaginate
               activeClassName={"pagination-item paginate-active "}
@@ -182,6 +184,7 @@ const ProductsShop = () => {
                 />
               }
             />
+
           </div>
           <div></div>
         </div>

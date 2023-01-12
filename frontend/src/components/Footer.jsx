@@ -7,6 +7,8 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "../styles/Footer.css";
+import ScrollToTop from "./ScrollToTop";
+
 function Footer() {
   return (
     <div class="footer-dark">
@@ -16,48 +18,67 @@ function Footer() {
             <div class="col-sm-6  col-md-3 item">
               <h3>SERVICES</h3>
               <ul>
+              <ScrollToTop/>
                 <li>
-                  <a href="#">Carebay</a>
+                <Link to={'/shop/Carebaby'} >
+                 Carebaby
+                </Link>
                 </li>
                 <li>
-                  <a href="#">Organic</a>
+                <Link to={'/shop/Organic'} >
+                 Organic
+                </Link>
                 </li>
                 <li>
-                  <a href="#">Lifestyle</a>
+                <Link to={'/shop/Lifestyle'} >
+                 Lifestyle
+                </Link>
                 </li>
                 <li>
-                  <a href="#">Medicines</a>
+                <Link to={'/shop/Medicines'} >
+                 Medicines
+                </Link>
                 </li>
                 <li>
-                  <a href="#">Health Care</a>
+                <Link to={'/shop/HealthCare'} >
+                 Healthcare
+                </Link>
                 </li>
 
                 <li>
-                  <a href="#">Personal Care</a>
+                <Link to={'/shop/PersonalCare'} >
+                 Personal Care
+                </Link>
                 </li>
 
               </ul>
             </div>
             <div class="col-sm-6 col-md-3 item">
-              <h3>ABOUT</h3>
+              <h3>QUICK LINKS</h3>
               <ul>
                 <li>
-                  <a href="#">Company</a>
+                  <Link to={'/shop'} >
+                    Shop
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <Link to={'/about'} >
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Delivery</a>
+                  <Link to={'/contact'} >
+                    Contacts Us
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">FAQs</a>
-                </li>
-                <li>
-                  <a href="#">Refund Policy</a>
+                  <Link to={'/delivery'} >
+                    Delivery Information
+                  </Link>
                 </li>
               </ul>
             </div>
+            
             <div class="col-md-6 item text">
               <h3>PARADOCS</h3>
               <p>
@@ -68,7 +89,7 @@ function Footer() {
               <div  className="col-md-6 float-end item btmimg">
               <img  src="https://lirp.cdn-website.com/8592f054/dms3rep/multi/opt/payment-methods-1920w.png" alt="paymentmethods" />
               </div>
-              </div>
+            </div>
 
             <div class="col item social">
               <Link>

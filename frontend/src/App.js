@@ -20,6 +20,7 @@ import Shipping from "./components/Shipping";
 import Delivery from "./pages/Delivery";
 import PlaceOrder from "./pages/PlaceOrder";
 import Wish from "./pages/Wish";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/placeorder" element={<PlaceOrder/>}/>
           <Route path="/wish" element={<Wish/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
     </Router>

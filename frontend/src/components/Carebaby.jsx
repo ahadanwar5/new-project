@@ -1,8 +1,9 @@
 import {
-    faChevronRight,
-    faCartShopping,
-    faHeart,
-  } from "@fortawesome/free-solid-svg-icons";
+  faChevronRight,
+  faCartShopping,
+  faHeart,
+  faChevronLeft
+} from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import axios from "axios";
   import React, { useEffect, useState, useContext } from "react";
@@ -13,8 +14,10 @@ import {
   import ProductShop from "./ProductShop";
   import { Store } from "../Store";
   import "../styles/ProductsShop.css";
+  import "../styles/pagination.css";
 
   import Navbar from "./Navbar"
+  import Footer from "./Footer";
   const Carebaby = () => {
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { cart, wish, userInfo } = state; //Comes from the initial state
@@ -29,7 +32,7 @@ import {
     //for paginate
     const [pageNumber, setPageNumber] = useState(0);
   
-    const productPerPage = 90;
+    const productPerPage = 12;
   
     const pagesVisited = pageNumber * productPerPage;
   
@@ -182,9 +185,42 @@ import {
           <div class="container mt-4" style={{ position: "relative" }}>
             <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
               {displayProducts}
-            </div>
+              </div>
           </div>
+          <div class="container-fluid pagination-grid">
+          <div></div>
+          <div>
+            <ReactPaginate
+              activeClassName={"pagination-item paginate-active "}
+              breakClassName={"pagination-item"}
+              breakLabel={"..."}
+              containerClassName={"pagination-styling"}
+              disabledClassName={"disabled-paginate-page"}
+              marginPagesDisplayed={2}
+              nextClassName={"pagination-item2 pagination-next "}
+              nextLabel={
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  style={{ fontSize: 18, width: 150 }}
+                />
+              }
+              onPageChange={changePage}
+              pageCount={pageCount}
+              pageClassName={"pagination-item pagination-page "}
+              pageRangeDisplayed={2}
+              previousClassName={"pagination-item2 pagination-previous"}
+              previousLabel={
+                <FontAwesomeIcon
+                  icon={faChevronLeft}
+                  style={{ fontSize: 18, width: 150 }}
+                />
+              }
+            />
+          </div>
+          <div></div>
         </div>
+        </div>
+        <Footer/>
       </>
     );
   };

@@ -19,10 +19,7 @@ function Home() {
             <Banner/>
             <PanelDisplay/>
             <TileDisplay/>
-
             <TrustDisplay/>
-
-
             <PartnersDisplay/>
             <Footnotes/>
             <Footer/>

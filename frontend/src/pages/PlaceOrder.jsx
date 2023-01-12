@@ -3,10 +3,12 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext, useEffect, useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Scrollbars } from "react-custom-scrollbars-2";
 
 import {
-  faChevronRight,
+  faTruckFast,
   faCartShopping,
+  faCreditCard,
   faHeart,
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +19,8 @@ import {
   CardHeader,
   Table,
   Button,
-  Spinner
+  Spinner,
+  CardFooter
 } from "reactstrap";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -100,8 +103,8 @@ const PlaceOrder = () => {
        </header>  
 
       <Card className="product-display">
-        <CardBody >
-          <div className="cart-button">
+     <CardBody>
+      <div className="cart-button">
           <div class="btn-group">
             <Link to="/cart">
               <button class="btn" data-toggle="tooltip">
@@ -111,12 +114,14 @@ const PlaceOrder = () => {
                 />
               </button>
             </Link>
-            <span class="badge badge-danger badge-styling">
+            <span class="badge badge-danger bdge-style">
               {cart.cartItems.length}
             </span>
           </div>
           </div>
-
+          {/* </CardBody> */}
+        <Card>
+          <CardHeader>
           <Table responsive>
             <thead>
               <tr>
@@ -126,6 +131,13 @@ const PlaceOrder = () => {
                 <th>Price</th>
               </tr>
             </thead>
+            </Table>
+          </CardHeader>
+        <CardBody >
+
+          <div className="shop-items-container">
+            <Scrollbars>
+          <Table responsive>
             <tbody>
             {cart.cartItems.map((item) => (
                 <tr>
@@ -138,62 +150,127 @@ const PlaceOrder = () => {
 
             </tbody>
           </Table>
+          </Scrollbars>
+         </div>
+
         </CardBody>
       </Card>
-
-      <div style={{display: 'flex', flexDirection: 'row', margin:'3rem', justifyContent:'space-evenly'}}>
-        <Card className="order-details-box">
-          <CardBody style={{textAlign: "left"}}>
-            <h6>
+      </CardBody>
+      <CardFooter>
+      <div className="row">
+        <div className="clearfix col-9   justify-content-start">
+           <div className="row ">            
+            <h3 className="title-ship float-start">
               Shipping Information
-            </h6>
-            <h6>
-            {cart.shippingAddress.fullName}{" "}
-            </h6>
-            <p>  
-              {cart.shippingAddress.address}, <br />
-              {cart.shippingAddress.city},{" "}
-              {cart.shippingAddress.country}{". "} {cart.shippingAddress.postalCode}
-            </p>
-          </CardBody>
-        </Card>
+              <hr></hr>
+            </h3>
+            </div>
+            <div className="row">
+            <div className="d-flex flex-row bd-highlight mb-2 clearfix float-start">
+            <div className="p-2 bd-highlight">  
+            <span className="ordersum">        
+          <FontAwesomeIcon
+                  icon={faTruckFast}
+                  class="order-but"
+                /> Street Address:
+              </span>              
+            </div>
+            <div className="p-1 bd-highlight mb-1">
+            </div>
+            <div className="p-1 bd-highlight mb-1">
+            <p className="address-det">               
+              House#no:  {cart.shippingAddress.address}, <br />
+              City:{cart.shippingAddress.city},{" "}<br/>
+              Postal Code:{cart.shippingAddress.postalCode}{" "} <br/>
+              Country :{cart.shippingAddress.country}{" "} 
+            </p> </div>  
+            </div>
+            <br></br>
+            </div>
+{/* /*asdad*/  }
+<div className="row">
+<br></br>
+ <h3 className="title-ship float-start">
+              Billing Information
+              <hr></hr>
+            </h3>
 
-        <Card className="order-details-box" style={{textAlign: "left"}}>
+<div className="d-inline-flex flex-row bd-highlight mb-1 clearfix ">            
+            <div className="p-2 bd-highlight">  
+            <span className="ordersum">        
+             <FontAwesomeIcon
+                  icon={faCreditCard}
+                  class="order-but"
+                />  Payment Details:
+                </span>
+            </div>
+            <div className="p-1 bd-highlight mb-1">
+            
+            </div>
+            <div className="p-3 bd-highlight mb-1">
+            <p className="address-det">               
+              Cash on Delivery             </p> </div>  
+            </div>
+           
+            </div>
+            </div>
+        <div className="col-3 offset-md-12 clearfix align-items-center">
           <Table responsive>
-          <h6>
+          <h6 >
               Order Details
           </h6>
             <tbody>
                   <tr>
-                    <td>Items Total:</td>
-                    <td>Rs.{cart.itemsPrice.toFixed(2)}</td>
+                    {/* <td></td> */}
+                    <td>
+                      <text className="float-start">
+                      Items Total: Rs.{cart.itemsPrice.toFixed(2)}
+                      </text>
+                      </td>
                   </tr>
                   <tr>
-                    <td>Shipping:</td>
-                    <td>Rs.{cart.shippingPrice.toFixed(2)}</td>
+                    {/* <td>Shipping:</td> */}
+                    
+                    <td>
+                    <text className="float-start">
+                      Shipping: Rs.{cart.shippingPrice.toFixed(2)}
+                      </text>
+                      </td>
                   </tr>
                   <tr>
-                    <td>Tax:</td>
-                    <td>Rs.{cart.taxPrice.toFixed(2)}</td>
+                    {/* <td>Tax: </td> */}
+                    <td>
+                    <text className="float-start">
+                    Tax: Rs.{cart.taxPrice.toFixed(2)}
+                    </text>
+                    </td>
                   </tr>
                   <tr>
-                    <td>Total:</td>
-                    <td>Rs.{cart.totalPrice.toFixed(2)}</td>
+                    {/* <td>Total:</td> */}
+                    <td>
+                    <text className="float-start">
+                    Total: Rs.{cart.totalPrice.toFixed(2)}
+                    </text>
+                    </td>
+                  
                   </tr>
             </tbody>
 
             {loading ? (
               <Spinner color="primary" />
             ) : (
-              <Button style={{marginTop:'20px'}} color="primary" onClick={placeOrderHandler}>
+              <Button className="order-button" onClick={placeOrderHandler}>
                 Confirm Order
               </Button>
             )}
 
           </Table>
-        </Card>
+        </div>
+</div>
+      </CardFooter>
+      </Card>
 
-      </div>
+
       
       <Footer />
     </>

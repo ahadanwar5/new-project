@@ -1,8 +1,8 @@
 .product-display {
     margin: 0 auto;
     padding: 1rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    /* padding-left: 10rem;
+    padding-right: 10rem; */
 }
 
 .product-display:hover {
@@ -12,13 +12,88 @@
   
 
 .order-details-box{
-    padding: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+align-items: center;
+justify-content: center;
+align-self: center;
+    padding-right: 1rem;
 }
 
 .cart-button{
     align-items: right;
 }
 
+.ordersum{
+ color: black;
+ align-items: flex-start;
+}
   
+.ordersum{
+    font-weight: 90;
+    font-size: 1.250rem;
+    font-family: "Roborto-Regular" ;
+    color :black;
+    margin-right: 5px;
+
+}
+
+.order-but{
+    width: 1.9rem;
+    height: 2rem;
+    color: black;
+    align-self:flex-start;
+   }
+.order-f{
+    flex-wrap: wrap; }
+
+.shop-items-container {
+        width: 100%;
+        height: 30rem;
+      }
+.bdge-style{
+    height: 20%;
+    width: 20%; 
+   }      
+
+/* //new// */
+   .title-ship{  font-size: 1.1rem;
+   text-align: left;
+   font-family: "Roboto-Regular" ;
+   color:black;
+   letter-spacing: 1px;
+    margin: 5px 5px 5px 5px;   }
+
+    .address-det{  font-size: 1rem;
+        text-align: left;
+        font-family: "Roboto-Regular" ;
+        color:black;
+        letter-spacing: 1px;
+         margin: 0px 0px 15px 5px;   }
+         
+.order-button {
+            height: 50px;
+            width: 250px;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+            font-size: 15px;
+            color:black;
+            background-color: rgb(204, 216, 219);
+            border-color: #f5dede;
+            border-width: 0px;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 10px;
+          }
+          
+          .order-button:hover {
+            background-color: #c1ddef;
+          }
+                   
+         @media screen and (max-width: 768px) {
+
+.order-button {
+              height: 3rem;
+              width: 9rem;
+              font-size: 8px;
+            }         
+        }

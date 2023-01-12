@@ -9,6 +9,13 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
+import {
+  faChevronRight,
+  faCartShopping,
+  faHeart,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Navbar() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, wish, userInfo } = state; //Comes from the initial state
@@ -173,6 +180,32 @@ export default function Navbar() {
                 </button>
               </>
             )}
+
+          <div class="btn-group">
+                    <Link to="/cart">
+                      <button class="btn" data-toggle="tooltip">
+                        <FontAwesomeIcon
+                          icon={faCartShopping}
+                          class="product-list-icon-styling"
+                        />
+                      </button>
+                    </Link>
+                    <span class="badge badge-danger badge-styling">
+                      {cart.cartItems.length}
+                    </span>
+                    <Link to="/wish">
+                      <button class="btn" data-toggle="tooltip">
+                        <FontAwesomeIcon
+                          icon={faHeart}
+                          class="product-list-icon-styling"
+                        />
+                      </button>
+                    </Link>
+                    <span class="badge badge-danger badge-styling">
+                      {wish.wishItems.length}
+                    </span>
+            </div>
+
           </div>
         </div>
       </nav>

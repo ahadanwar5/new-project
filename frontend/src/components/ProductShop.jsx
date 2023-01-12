@@ -1,14 +1,19 @@
 import axios from "axios";
 
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
 import { Store } from "../Store";
 import { Link } from 'react-router-dom'
 import "../styles/ProductShop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faEye } from "@fortawesome/free-solid-svg-icons";
+import Quick from "../components/Quick";
+
+
+
 
 const ProductShop = ({ item }) => {
+  const [open, setOpen] = useState(false);
+
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, wish } = state;
   const addToCartHandler = async () => {
@@ -48,7 +53,7 @@ const ProductShop = ({ item }) => {
  
 
     <div class="col hp">
-      <div class="card h-90 shadow-sm card-styling-boundary">
+      <div class="card h-100 shadow-sm card-styling-boundary">
         <Link  to={`/product/${item.slug}`}>
         <img src={item.image} class="card-img-top" alt="product.title" />
         </Link>
@@ -81,12 +86,13 @@ const ProductShop = ({ item }) => {
             </button>
           </div>
           <div class="clearfix mb-1">
-            <span class="float-start">
-              <a href="#">
-                <i class="fas fa-question-circle"></i>
-              </a>
-            </span>
-
+              <span class="float-start">
+              <FontAwesomeIcon
+                  onClick={() => setOpen(true)}
+                  icon={faEye}
+                  class="wishlist-icon-styling mr-1"
+                />
+              </span>
             <span class="float-end">
               <FontAwesomeIcon
                 onClick={addToWishHandler}
@@ -97,6 +103,7 @@ const ProductShop = ({ item }) => {
           </div>
         </div>
       </div>
+      {open && <Quick item={item} />}
     </div>
   );
 };

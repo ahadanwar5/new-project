@@ -88,7 +88,7 @@ export default function Cart() {
                     </div>
 
                     <div className="price">
-                      <h3>${cartItem.price}</h3>
+                      <h3>Rs.{cartItem.price}</h3>
                     </div>
 
                     <div className="remove-item">
@@ -128,7 +128,7 @@ export default function Cart() {
     <>
       <Navbar />
       <header>
-        <div class="bg-image d-flex justify-content-center align-items-center cart-heading-title">
+        <div class="bg-image d-flex justify-content-center align-items-center xcart-heading-title">
           <h1 class="text-white cart-heading">Shopping Cart</h1>
         </div>
       </header>

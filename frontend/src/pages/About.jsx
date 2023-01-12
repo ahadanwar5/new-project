@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+    backgroundColor:'white',
   },
 }));
 
@@ -45,6 +44,7 @@ export default function About() {
         <Typography variant="body1" align="center" paragraph>
           At our store, we believe in the importance of transparency. That's why we make sure to provide customers with detailed information about our products and services. We want customers to be informed about their purchase decisions and to feel confident about the products they are buying from us.
         </Typography>
+
       </Container>
 
       <footer className={classes.footer}>

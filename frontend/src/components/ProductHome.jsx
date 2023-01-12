@@ -51,8 +51,9 @@ const ProductHome = ({item}) => {
  
       <div class="col hp">
         <div class="card h-90 shadow-sm card-styling-boundary">
-          <img src={item.image} class="card-img-top" alt="product.title" />
-  
+          <Link to={`/product/${item.slug}`} >
+            <img src={item.image} class="card-img-top" alt="product.title" />
+          </Link>
           <div class="label-top shadow-sm">
             <a class="text-white" href="#">
               {item.brand}
